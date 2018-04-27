@@ -18,13 +18,20 @@
       <p>We perform BFS on this graph to get configurations. Assume we have a target user ut and a target item ti. The recommender system 
       is now expected to predict the preference of the user ut with respect to the item ti depending on the information available. 
       The Love-Hate Square Counting Method does this by taking into account the neighboring users of the uset ut. A user must satisfy the following conditions 
-      to be a neighbor of the target user ut. 
-      <ul>
+        to be a neighbor of the target user ut.</p>
+      </div>
+      
+      <div class="contents3">
+      <p>
+        <ul>
       <li>The user must have rated the target item ti.</li>
       <li>The user must have rated an item or items which the targer user ut has also rated.</li>
       </ul>
+        </p>
+    </div>
       
-          Now the frequency of all the possible configurations are found by performing a BFS traversal on the bipartite graph. Assuming the intermediate
+          <div class="contents4">
+          <p>Now the frequency of all the possible configurations are found by performing a BFS traversal on the bipartite graph. Assuming the intermediate
          user to be ot and intermediate item to be oi, the possible configurations are as shown below.</p>
       </div>
     
