@@ -5,43 +5,43 @@
   <div class="user">
     <div class="tech">
       
-      <p>The Love-Hate Square Counting method is implemented with a bipartite graph. This method is more like a network-based Collaborative filtering.
-      We represent the users as one set of nodes and the items (books) as another set of nodes and form the bipartite graph. The edges between
-      the user and the item are classified as Love (+) if the user's rating for the item is more than 7 and Hate (-) if the rating is less than or 
-      equal to 7.</p>
+      <p>The Love-Hate Square Counting method is implemented with a bipartite graph. This method is more like a network-based
+        Collaborative filtering. We represent the users as one set of nodes and the items (books) as another set of nodes and 
+        form the bipartite graph. The edges between the user and the item are classified as Love (+) if the user's rating for 
+        the item is more than 7 and Hate (-) if the rating is less than or equal to 7.</p>
       
       <div class="images">
         <img alt="graph" src="{{ "/assets/img/Bipartite graph.jpg" | prepend: site.baseurl }}" />
       </div>
       
       <div class="contents2">
-      <p>We perform BFS on this graph to get configurations. Assume we have a target user ut and a target item ti. The recommender system 
-      is now expected to predict the preference of the user ut with respect to the item ti depending on the information available. 
-      The Love-Hate Square Counting Method does this by taking into account the neighboring users of the uset ut. A user must satisfy the following conditions 
-        to be a neighbor of the target user ut.</p>
+      <p>We perform BFS on this graph to get configurations. Assume we have a target user ut and a target item ti. The 
+        recommender system is now expected to predict the preference of the user ut with respect to the item ti depending 
+        on the information available. The Love-Hate Square Counting Method does this by taking into account the neighboring 
+        users of the uset ut. A user must satisfy the following conditions to be a neighbor of the target user ut.</p>
       </div>
       
       <div class="contents3">
       <p>
         
         1) The user must have rated the target item ti.</br>
-       2) The user must have rated an item or items which the targer user ut has also rated.
+        2) The user must have rated an item or items which the targer user ut has also rated.
 
         </p>
-    </div>
-      
-          <div class="contents4">
-          <p>Now the frequency of all the possible configurations are found by performing a BFS traversal on the bipartite graph. Assuming the intermediate
-         user to be ot and intermediate item to be oi, the possible configurations are as shown below.</p>
       </div>
+      
+       <div class="contents4">
+          <p>Now the frequency of all the possible configurations are found by performing a BFS traversal on the bipartite graph.
+            Assuming the intermediate user to be ot and intermediate item to be oi, the possible configurations are as shown below.</p>
+       </div>
     
       <div class="images">
         <img alt="configurations" src="{{ "/assets/img/config.jpg" | prepend: site.baseurl }}" />
       </div>
     
       <div class="contents3">
-      <p>The frequency of all the possible configurations are counted and the represented as a feature vector with 8 features. This feature vector is then fed into
-         a Machine Learning model to train and the model is tested for accuracy. </p>
+      <p>The frequency of all the possible configurations are counted and the represented as a feature vector with 8 features. 
+        This feature vector is then fed into a Machine Learning model to train and the model is tested for accuracy. </p>
       </div>
    </div>
 </div>
