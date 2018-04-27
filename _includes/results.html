@@ -9,13 +9,22 @@
       <div class="contents4">
       <p>We use Naive Bayes, Logistic Regression, SVM, Decision Trees and KNN to classify and predict whether the target user
         loves or hates the target item. We see that SVM and Logistic Regression perform the best of all. 
-        We used Matrix Factorization method (SVD) to evaluate our love-hate model against SVD and found that the RMSE scores
-         and the recall values for hate were not that great for SVD. Hence, our model performs better than SVD giving a RMSE
+        We used the classic method of prediction, the Matrix Factorization method to evaluate our love-hate model. The SVD model was
+         implemented and it was found that the RMSE values are actually lesser for the LHSCM and the recall values for hate were not 
+        that great for SVD. Hence, our model performs better than SVD giving a RMSE
          of 0.62 for Logistic Regression and a recall value of 0.95 for hate for SVM. 
         A point here to be noted is that we want the recall value for hate to be high, so that nothing which is actually hated
         is seen as love and recommended to the user!</p>
+        
       </div>
-
+      <div class="images">
+        <img alt="graph" src="{{ "/assets/img/Table.jpg" | prepend: site.baseurl }}" />
+      </div>
       
-            </div>
+      <div class="images">
+        <img alt="graph" src="{{ "/assets/img/Graph.jpg" | prepend: site.baseurl }}" />
+      </div>
+      
+      
+ </div>
                   </div>
