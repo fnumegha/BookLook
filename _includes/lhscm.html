@@ -1,0 +1,31 @@
+<div class="user-details">
+  <h1>Whatcha reading today, doc?!</h1>
+  
+</div>
+  <div class="user">
+    <div class="tech">
+      <div class="contents">
+      <p>The Love-Hate Square Counting method is implemented with a bipartite graph. This method is more like a network-based Collaborative filtering.
+      We represent the users as one set of nodes and the items (books) as another set of nodes and form the bipartite graph. The edges between
+      the user and the item are classified as Love (+) if the user's rating for the item is more than 7 and Hate (-) if the rating is less than or 
+      equal to 7.</p>
+      </div>
+      
+      <div class="images">
+        <img alt="graph" src="{{ "/assets/img/Bipartite graph.jpg" | prepend: site.baseurl }}" />
+      </div>
+      
+      <div class="contents2">
+      <p>We perform BFS on this graph to get configurations. Assume we have a target user ut and a target item it. The recommender system 
+      is now expected to predict the preference of the user ut with respect to the item it depending on the information available. 
+      The Love-Hate Square Counting Method does this by taking into account the neighboring users of the uset ut. A user must satisfy the following conditions 
+      to be a neighbor of the target user ut. </p>
+      <ul>
+      <li>The user must have rated the target item it.</li>
+      <li>The user must have rated an item or items which the targer user ut has also rated.</li>
+      </ul>
+      
+      <p>We perform BFS to find all such neighbors and to find the frequency of the possible configurations.</p>
+      </div>
+   </div>
+</div>
