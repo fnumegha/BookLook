@@ -1,0 +1,30 @@
+<div class="user-details">
+  <h1>Results</h1>
+  
+</div>
+
+<div class="user">
+    <div class="tech">      
+      
+      <div class="contents4">
+      <p>We use Naive Bayes, Logistic Regression, SVM, Decision Trees and KNN to classify and predict whether the target user
+        loves or hates the target item. We see that SVM and Logistic Regression perform the best of all. 
+        We used Matrix Factorization method (SVD) to evaluate our love-hate model against SVD and found that the RMSE scores
+         and the recall values for hate were not that great for SVD. Hence, our model performs better than SVD giving a RMSE
+         of  for Logistic Regression and a recall value of for SVM. 
+        A point here to be noted is that we want the recall value for hate to be high, so that nothing which is actually hated
+        is seen as love and recommended to the user!</p>
+      </div>
+
+      <div class="contents4">
+      <p> We go beyond our model to construct a neural network using Restricted Boltzman Machines (RBM) which constructs 
+        the feature vectors by itself when trained. An RBM network is an undirected bipartite network with visible nodes on one side and hidden nodes on the other side with the edges between
+        them as weights.
+        Think of the visible nodes as Books and the hidden nodes as latent factors (eg: genre, author, bestseller etc.). The
+         network goes on in training by updating the weights from visible to hidden nodes in one iteration and then updating
+        the weights again from hidden to visible nodes in the next iteration and so on. During testing, we evaluate the model
+        on the latent vectors/feature vectors that the network learnt by itself during training.
+        We see that RBM improves the RMSE to 0.58, which is the least for all the models tested by us. </p>
+      </div>
+            </div>
+                  </div>
